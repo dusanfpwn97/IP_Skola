@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zadatak 9 - Slike</title>
+<script>
+	function uvelicaj(fajl){
+		document.getElementById("slika").src=fajl;
+		document.getElementById("skriven").style.display="block";
+	}
+	function sakrij(){
+		document.getElementById("skriven").style.display="none";
+	}
+</script>
+<meta charset="UTF-8" />
+</head>
+<body>
+	<div>
+		<img src="slike/slika1.jpg" width="200px" onClick="uvelicaj('slike/slika1.jpg')"/>
+	</div>
+	<div>
+		<img src="slike/slika2.jpg" width="200px" onClick="uvelicaj('slike/slika2.jpg')"/>
+	</div>
+	<div>
+		<img src="slike/slika3.jpg" width="200px" onClick="uvelicaj('slike/slika3.jpg')"/>
+	</div>
+	<div>
+		<img src="slike/slika4.jpg" width="200px" onClick="uvelicaj('slike/slika4.jpg')"/>
+	</div>
+
+	<div id="skriven" style="display:none; position:fixed; top:0; left:0; bottom:0; right:0;">
+		<img id="slika" src="slike/slika1.jpg" style="width:100%; heigth:100%" onClick="sakrij()"/>
+	</div>
+</body>
+</html>

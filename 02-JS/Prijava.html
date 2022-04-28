@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<Title>ВТШСС Пожаревац</Title>
+		<Link rel="stylesheet" type="text/css" href="stil.css"/>
+		<meta charset="UTF-8" />
+		<script>
+		function ProveraRadioDugmadi(RadioGroup){
+			for (i = 0; i <RadioGroup.length; i++){
+				if (RadioGroup[i].checked){
+					return (true);}}
+			return (false);
+		}
+		function ValidateForm(Forma){
+			var validna = true;
+			if (Forma.ImeStudenta.value==""){
+				document.getElementById("ImeGreska").innerHTML += "Niste popunili polje Ime! Upisite Vase ime!";
+				validna = false;
+			}
+			if (Forma.PrezimeStudenta.value==""){
+				document.getElementById("PrezimeGreska").innerHTML += "Niste popunili polje Prezime! Upisite Vase prezime!";
+				validna = false;
+			}
+			if (Forma.Adresa.value==""){
+				document.getElementById("AdresaGreska").innerHTML += "Niste popunili polje Adresa! Upisite Vasu adresu!";
+				validna = false;
+			}
+			if(Forma.Grad.value ==""){
+				document.getElementById("GradGreska").innerHTML += "Molimo Vas selektujte grad!";
+				validna = false;
+			}
+			if (!ProveraRadioDugmadi(Forma.Pol)){
+				document.getElementById("PolGreska").innerHTML += "Molimo Vas izaberite pol!";
+				validna = false;
+			}
+			if (Forma.Odsek.value == ""){
+				document.getElementById("OdsekGreska").innerHTML += "Molimo Vas selektujte modul!";
+				validna = false;
+			}
+			if(Forma.Potvrda.checked == false){
+				document.getElementById("PotvrdaGreska").innerHTML += "Morate potvrditi da su uneti podaci tačni!";
+				validna = false;
+			}
+			//Podaci su provereni.
+			return(validna);
+		}
+		</script>
+	</head>
+	<body>
+    <div class="zaglavlje" id="vrh">
+        <div class="naslov">
+            Висока техничка школа Пожаревац
+        </div>
+        <div class="meni">
+            <a href="index.html">Добродошли</a>
+            <a href="Oskoli.html">О школи</a>
+            <a href="StudijskiProgrami.html">Студијски програми</a>
+            <a href="Prijava.html">Пријава</a>
+
+        </div>
+        <div class="senkaispod"></div>
+    </div>
+    <div class="kontejner">
+        <div class="levo">
+            <img src="slike/logo.png" />
+            <br><br> Висока техничка школа <br> струковних студија <br> Пожаревац
+            <br> Немањина 2
+        </div>
+		<div id="Forma">
+			<form name="forma1" method="post" onsubmit="return ValidateForm(forma1)">
+				<center>UNESITE LIČNE PODATKE:</center>
+				<p>Ime: <input name="ImeStudenta" type="text" > <div id="ImeGreska" class="Greska"></div></p>
+				<p>Prezime: <input name="PrezimeStudenta" type="text" > <div id="PrezimeGreska" class="Greska"></div></p>
+				<p>Adresa: <textarea name="Adresa" cols="35" rows="3"></textarea><div id="AdresaGreska" class="Greska"></div></p>
+				<p>Grad: 
+					<select name="Grad" size="3" >
+						<option>Požarevac</option>
+						<option>Beograd</option>
+						<option>Novi Sad</option>
+						<option>Niš</option>
+						<option>Čačak</option>
+					</select>
+					<div id="GradGreska" class="Greska"></div>
+				</p>
+				<p>Pol: 
+					<input name="Pol" type="radio" value="M"> muški
+					<input type="radio" name="Pol" value="Z"> ženski
+					<div id="PolGreska" class="Greska"></div>
+				</p>
+				<p>Modul: 
+					<select name="Odsek">
+						<option>Elektrotehnika</option>
+						<option>Mašinstvo</option>
+						<option>Agronomija</option>
+						<option>Ekologija</option>
+						<option>Prehrambena tehnilogija</option>
+					</select>
+					<div id="OdsekGreska" class="Greska"></div>
+				</p>
+				<p align="right"><input name="Potvrda" type="checkbox" > Potvrđujem da su podaci tačni</p>
+				<div id="PotvrdaGreska" class="Greska"></div>
+				<p align="center">
+					<input name="btnPotvrdi" type="submit" value="Potvrdi">
+					<input name="btnObrisi" type="reset" value="Obriši">
+				</p>
+			</form>
+		</div>
+        <div style="clear:both;"></div>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pogađanje brojeva</title>
+<meta charset="UTF-8" />
+<script>
+	var a, pok=0;//dodeli vrednost
+	function proveri(){
+		pok ++ ;
+		var  b= Number(document.getElementsByName("polje")[0].value);
+		//dodaj kod za proveru
+		if (a>b) {
+			document.getElementById("istorija").innerHTML += "<p>U " + pok + ". pokušaju predložen je broj " + b + ". Moj broj je veći od predloženog broja.</p>";
+		} else if(a<b) {
+			document.getElementById("istorija").innerHTML += "<p>U " + pok + ". pokušaju predložen je broj " + b + ". Moj broj je manji od predloženog broja.</p>";
+		} else {
+			document.getElementById("istorija").innerHTML += "<p>U " + pok + ". pokušaju predložen je broj " + b + ". Broj " + a + " je tačan broj.</p>";
+			document.getElementsByName("polje")[0].style="display:none;";
+			document.getElementsByName("akcija")[0].style="display:none;";
+			document.getElementsByName("pocetak")[0].style="display:block;";
+		}
+		document.getElementsByName("polje")[0].value="";
+	}
+	function pocni(){
+		pok=0;
+		a=Math.ceil(Math.random()*100);
+		document.getElementsByName("polje")[0].style="display:inline-block;";
+		document.getElementsByName("akcija")[0].style="display:inline-block;";
+		document.getElementsByName("pocetak")[0].style="display:none;";
+		document.getElementById("istorija").innerHTML = "Zamislio sam broj od 1 do 100. Da li možeš da pogodiš koji broj sam zamislio.";
+	}
+</script>
+</head>
+<body>
+<div id="glavniElement" style="margin:auto; width:500px;">
+<div id="istorija" style="padding:20px; background-color:lightblue;"></div>
+<div name="forma" style="padding:20px; background-color:yellow;">
+<input name="polje" type="text" style="display:none;"> 
+<input type="button" name="akcija" value="Provera" OnClick="proveri()" style="display:none;">
+<input type="button" name="pocetak" value="Nova igra" OnClick="pocni()" style="display:block;">
+</div>
+</div>
+</body></html>

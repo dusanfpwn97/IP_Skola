@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zadatak 9 - Slike</title>
+<script>
+	function uvelicaj(){
+		document.getElementById("skriven").style.display="block";
+	}
+	function sakrij(){
+		document.getElementById("skriven").style.display="none";
+	}
+</script>
+<meta charset="UTF-8" />
+</head>
+<body>
+<div>
+	<img src="slike/slika1.jpg" width=200px onClick="uvelicaj()"/>
+</div>
+
+	<div id="skriven" style="display:none; position:fixed; top:0; left:0; bottom:0; right:0;">
+		<img src="slike/slika1.jpg" style="width:100%; heigth:100%" onClick="sakrij()"/>
+	</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>Zadatak 2</title>
+	<script>
+		function naziv_meseca(mesec){
+			var ime_meseca;
+			if (mesec == 1) ime_meseca="Januar";
+			else if (mesec == 2) ime_meseca="Februar";
+			else if (mesec == 3) ime_meseca="Mart";
+			else if (mesec == 4) ime_meseca="April";
+			else if (mesec == 5) ime_meseca="Maj";
+			else if (mesec == 6) ime_meseca="Jun";
+			else if (mesec == 7) ime_meseca="Jul";
+			else if (mesec == 8) ime_meseca="Avgust";
+			else if (mesec == 9) ime_meseca="Septembar";
+			else if (mesec == 10) ime_meseca="Oktobar";
+			else if (mesec == 11) ime_meseca="Novembar";
+			else if (mesec == 12) ime_meseca="Decembar";
+			return ime_meseca;}
+		function naziv_meseca1(mesec){
+			var imena_meseca=[
+			"Januar", 
+			"Februar",
+			"Mart",
+			"April",
+			"Maj",
+			"Jun",
+			"Jul",
+			"Avgust",
+			"Septembar",
+			"Oktobar",
+			"Novembar",
+			"Decembar"]
+			return imena_meseca[mesec];
+			
+			return ime_meseca;}
+	</script>
+</head>		
+<body>
+	<script>
+		var m=5; 
+		document.write("<h2>Naziv " + m +". meseca je " + naziv_meseca(m) + "</h2>");
+	</script>
+</body>
+</html>

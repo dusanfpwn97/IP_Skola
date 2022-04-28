@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zadatak 10 - Slučajni brojevi</title>
+<script>
+	function slucajniBrojevi(){
+		for (var i=1;i<=100;i++){
+			var a = Math.ceil(Math.random()*100);
+			document.getElementById("Id1").innerHTML+= "<p>"+i +". broj je " + a + "</p>";
+		}
+	}	
+</script>
+<meta charset="UTF-8" />
+</head>
+<body>
+	<div id="Id1" onClick="slucajniBrojevi()">
+		Klik za generisanje 100 slučajnih brojeva
+	</div>
+</body>
+</html>
