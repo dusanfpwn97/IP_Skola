@@ -1,0 +1,179 @@
+/*Zadatak 1*/
+body{
+background-color:#6B90B3;
+padding:0px;
+margin:0px;
+}
+.kontejner{
+width:1000px;
+background-color:white;
+padding:0px;
+margin:auto;
+}
+.BanerSlike{
+width:100%;
+height:100px;
+background-color:#0A3C6B;
+margin:0px;
+text-align:center;
+}
+.BanerSlike img{
+height:90px;
+margin:5px 0px;
+}
+/*Zadatak 2*/
+.Naslov{
+font-size:3em;
+line-height:2em;
+color:#0A3C6B;
+text-align:center;
+text-shadow: 5px 5px 2px #6C7B8B;
+border-bottom:2px solid #0A3C6B;
+margin-top:0px;
+padding:0px;
+}
+/*Zadatak 3*/
+.SredinaLevo{
+width:30%;
+vertical-align:text-top;/*ne mora*/
+text-align:center;/*ne mora*/
+float:left;
+}
+.grb {/*može i .SredinaLevo img{*/
+width:240px;
+padding:50px 0px 30px 0px;
+}
+/*Zadatak 4*/
+.SredinaLevo>a{
+display:block;
+margin:0px 20px; 
+padding:10px; 
+border:1px #6C7B8B solid;
+background-color:#E6E8FA;
+font-size:1.2em; 
+line-height:2em;
+box-shadow: 5px 5px #6C7B8B;
+}
+.SredinaLevo a:hover{
+background-color:#6C7B8B;
+color:white;
+}
+/*Zadatak 5*/
+.tabela{
+border-collapse:collapse;
+width:260px;
+margin:20px;
+font-size:1em;
+font-family:Calibri; 
+color:#0A3C6B; 
+box-shadow: 5px 5px #6C7B8B;
+}
+.tabela th{
+background-color:#6C7B8B; 
+color:white; 
+border: 1px solid #6C7B8B; 
+}
+.tabela tr:nth-child(odd){
+background-color:#E6E8FA;
+}
+.tabela tr:nth-child(even){
+background-color:white;
+}
+.tabela td{
+padding:2px 10px;
+border: 1px solid #6C7B8B;
+}
+/*Zadatak 6*/
+#ElementZanimljivosti{
+margin:10px 20px;
+border:1px #6C7B8B solid;
+background-color:#E6E8FA;
+box-shadow: 5px 5px #6C7B8B;
+border-radius: 10px;
+display:none;
+}
+#ElementZanimljivosti p{
+text-align:justify;
+font-family:Calibri;
+font-size:1em;
+color:#0A3C6B;
+padding:10px 15px;
+margin:0px;
+}
+/*Zadatak 7*/
+.SredinaDesno{
+width:70%;
+vertical-align:top;
+float:left;
+}
+.SredinaDesno p{
+font-size:1em;
+font-family:Calibri;
+color:#0A3C6B;
+text-align:justify;
+padding-left:0px;
+padding-right:20px;
+padding-top:10px;
+text-indent:50px;
+margin:0px;
+}
+/*Zadatak 8*/
+
+.ElementDesno{
+float:right;
+margin:10 20px;
+width:250px;
+height:150px;
+overflow:hidden;
+position:relative;
+}
+#ElementDesno{
+width:500px;
+height:150px;
+overflow:hidden;
+position:relative;
+}
+#ElementDesno img{
+width:250px;
+height:150px;
+display:inline-block;
+}
+#skriveniElement{
+display:none; 
+position:fixed;
+left:0px;
+top:0px;
+right:0px;
+bottom:0px;
+background-color:black; 
+padding:10px;
+border:1px #6C7B8B solid; 
+font-size:1.2em;
+font-family:Calibri;
+color:#0A3C6B;
+text-align:center;
+}
+#skrivenielement img{
+height:90%;
+}
+/*Zadatak 9*/
+.Podnozje{
+clear:both;
+border-top:2px solid #0A3C6B;
+}
+/*Zadatak 10*/
+.fiksni{
+position:fixed;
+right:5px;
+bottom:5px;
+width:200px;
+height:22px;
+border-radius:10px;
+background-color:white;
+text-align:center;
+font-size:1em;
+font-weight:bold;
+font-family:Calibri;
+color:#0A3C6B;
+padding:8px;
+}

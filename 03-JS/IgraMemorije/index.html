@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html><head>
+		<title>Igra memorije</title>
+		<meta charset="UTF-8">
+		<script>
+		<!--
+			var pozicija=[];
+			var otkriveno=[];
+			var izabrano1=-1;
+			var izabrano2=-1;
+			var brojotkrivenih=0;
+			var brojpokusaja=0;
+			var vreme=0;
+			var tajmout;
+			function stoperica(){
+				vreme++;
+				document.getElementById("statistika").innerHTML="Broj pokušaja: "+brojpokusaja+"<br/>Broj otkrivenih: "+brojotkrivenih+"<br/>Vreme: "+vreme+" sekundi"; 
+			}
+			function postavi() {
+					
+					var i=0, j=0, k=0;
+					while (i<20){
+					pozicija[i]=Math.floor(Math.random()*10);
+					j=0;k=0;
+						while (j<i){
+							if (pozicija[j]==pozicija[i]) k++;
+							j++;
+							}
+						if (k<2)i++;}
+						i=0;
+						while(i<20){
+							document.getElementById(i).src="slike/logo.png";
+							otkriveno[i]=false;
+							i++;
+						}
+						document.getElementById("slike").style="display:block;";
+						brojotkrivenih=0;
+						brojpokusaja=0;
+						vreme=0;
+						document.getElementById("statistika").innerHTML="Broj pokušaja: "+brojpokusaja+"<br/>Broj otkrivenih: "+brojotkrivenih+"<br/>Vreme: "+vreme+" sekundi";
+						tajmout=setInterval("stoperica()", 1000);
+						
+			}
+			function klik(broj){
+
+				if (!otkriveno[broj] && izabrano2<0 && pozicija[broj]>=0){
+				if(izabrano1<0){
+					izabrano1=broj;
+					document.getElementById(broj).src="slike/"+pozicija[broj]+".jpg";
+					otkriveno[broj]=true;
+				}
+				else {
+					if (pozicija[izabrano1]==pozicija[broj]){
+						document.getElementById(broj).src="slike/"+pozicija[broj]+".jpg";
+						otkriveno[broj]=true;
+						izabrano1=-1;
+						brojotkrivenih+=2;
+						
+					}
+					else {
+						document.getElementById(broj).src="slike/"+pozicija[broj]+".jpg";
+						izabrano2=broj;
+						setTimeout(function(){document.getElementById(izabrano2).src="slike/logo.png";document.getElementById(izabrano1).src="slike/logo.png";otkriveno[izabrano1]=false;izabrano2=-1;izabrano1=-1;}, 2000);
+					}
+					brojpokusaja++;
+					if (brojotkrivenih<20)
+					{document.getElementById("statistika").innerHTML="Broj pokušaja: "+brojpokusaja+"<br/>Broj otkrivenih: "+brojotkrivenih+"<br/>Vreme: "+vreme+" sekundi";}
+					else{document.getElementById("statistika").innerHTML="Broj pokušaja: "+brojpokusaja+"<br/>Otkrivene sve. Klik za novu igru!<br/>Vreme: "+vreme+" sekundi";clearInterval(tajmout);}
+				}
+			}
+			}
+			
+			
+		--></script>
+		<style><!--
+			body{
+				margin:0px;padding:0px;
+				background-color:#82b74b;
+			}
+			.sadrzaj{
+				width:1000px;
+				margin:auto;
+				background-color:#c1946a;
+				
+			}
+			.slike{
+			display:none;
+			clear:both;
+			}
+			.slike img{
+				display:inline-block;
+				width:180px;
+				height:120px;
+				margin:5px 9px;
+				border-radius:10px;
+				border:1px solid black;
+				padding:0px;
+				cursor:pointer;
+			}
+			#sl20 {
+				float:right;
+				height:50px;
+				cursor:pointer;
+				margin:5px 10px;
+			}
+			#statistika{
+				font-family:Calibri;
+				font-size:15px;
+				color:#3e4444;
+				float:right;
+				width:250px;
+				height:50px;
+				margin:0px 0px 0px 0px;
+			}
+			#naslov{
+				float:left;
+				width:350px;
+				font-family:Calibri;
+				font-size:50px;
+				color:#3e4444;
+				margin:0px 20px 10px 20px;
+				height:50px;
+			}
+			#podnaslov{
+				float:left;
+				font-family:Calibri;
+				font-size:30px;
+				color:#3e4444;
+				margin:20px 20px 10px 0px;
+				height:30px;
+			}
+			--></style>
+	</head>
+	<body>
+	<div class="sadrzaj">
+			<img id="sl20" src="slike/index.png" onclick="postavi()"/>
+			<div id="statistika"> Klik na ikonicu za novu igru.  <div id="stoperica"></div></div>
+			<div id="naslov">IGRA MEMORIJE</div>
+			<div id="podnaslov">Povezati iste slike!</div>
+
+			<div id="slike" class="slike">
+			<img id="0" src="slike/logo.png" onclick="klik(0)"/><img id="1" src="slike/logo.png" onclick="klik(1)"/><img id="2" src="slike/logo.png" onclick="klik(2)"/><img id="3" src="slike/logo.png" onclick="klik(3)"/><img id="4" src="slike/logo.png" onclick="klik(4)"/>
+			<img id="5" src="slike/logo.png" onclick="klik(5)"/><img id="6" src="slike/logo.png" onclick="klik(6)"/><img id="7" src="slike/logo.png" onclick="klik(7)"/><img id="8" src="slike/logo.png" onclick="klik(8)"/><img id="9" src="slike/logo.png" onclick="klik(9)"/>
+			<img id="10" src="slike/logo.png" onclick="klik(10)"/><img id="11" src="slike/logo.png" onclick="klik(11)"/><img id="12" src="slike/logo.png" onclick="klik(12)"/><img id="13" src="slike/logo.png" onclick="klik(13)"/><img id="14" src="slike/logo.png" onclick="klik(14)"/>
+			<img id="15" src="slike/logo.png" onclick="klik(15)"/><img id="16" src="slike/logo.png" onclick="klik(16)"/><img id="17" src="slike/logo.png" onclick="klik(17)"/><img id="18" src="slike/logo.png" onclick="klik(18)"/><img id="19" src="slike/logo.png" onclick="klik(19)"/>
+			</div>
+		</div>
+
+	</body>	
+		
+</html>
