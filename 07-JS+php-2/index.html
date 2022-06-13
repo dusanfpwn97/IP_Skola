@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <Title>ВТШСС Пожаревац</Title>
+    <Link rel="stylesheet" type="text/css" href="stil.css">
+    <script>
+        //Prvi zadatak
+		function PrviZadatak(){
+			const datum = new Date();
+			document.getElementById('Tekst').innerHTML = "&copy; 123456/2017, ime i prezime studenta - Internet Programiranje - " + datum;
+		}
+		//Završen prvi zadatak
+		//Drugi zadatak
+		var vrh=-400;
+		function DrugiZadatak(){
+			if (vrh >= 0) {
+                vrh = -400;
+            } else {
+                vrh += 40;
+            }
+            document.getElementById('vesti').style = "top: " + vrh + "px;";
+			setTimeout(DrugiZadatak, 1000);
+		}
+		function PokreniFunkcije(){
+			PrviZadatak();
+			DrugiZadatak();
+		}
+		//Završen drugi zadatak
+    </script>
+</head>
+
+<body OnLoad="PokreniFunkcije()">
+    <div class="zaglavlje" id="vrh">
+        <div class="naslov">
+            Висока техничка школа Пожаревац
+        </div>
+        <div class="meni">
+            <a href="index.html">Добродошли</a>
+            <a href="Oskoli.html">О школи</a>
+            <a href="StudijskiProgrami.html">Студијски програми</a>
+            <a href="insert.php">Пријава испита</a>
+
+        </div>
+        <div class="senkaispod"></div>
+    </div>
+    <div class="kontejner">
+        <div class="levo">
+            <img src="slike/logo.png" />
+            <br><br> Висока техничка школа <br> струковних студија <br> Пожаревац
+            <br> Немањина 2
+        </div>
+        <div class="sadrzaj">
+
+            <img id="slika" src="slike/slika1.jpg" onClick="Uvelicaj()" />
+
+            <p>Висока техничка школа струковних студија Пожаревац је основана 1979. године и до данас је једина високошколска установа у браничевском округу чији је оснивач Република Србија. Дугогодишње постојање указује на традицију и квалитет у образовању.
+                <p>Од оснивања до данас на Високој техничкој школи је дипломирало 3284 студента. Основне струковне студије трају 3 године на 5 акредитованих студијских програма са 8 модула и након завршетка студент стиче звање струковни инжењер.
+                    <p>После завршених основних струковних студија студент стичу право уписа специјалистичких струковних студија у трајању од једне године чиме стиче звање специјалиста - струковни инжењер. Наставу у школи реализује високо стручни кадар,
+                        од којих је 23 доктора наука, 9 магистара наука, 1 специјалиста и 8 стручних сарадника, као и одговарајућег броја ненаставног особља.
+                        <p>Школа располаже са 2070м простора за извођење наставе (амфитеатар, учионице, лабораторије и остало) који је опремљен савременим средствима за извођење наставе. Школа перманентно усклађује наставне планове и програме са новим европским
+                            образовним трендовима, новим технологијама и актуелним потребама и захтевима привреде.
+
+
+        </div>
+        <div class="desno">
+            <p><b>Вести и обавештења:</b></p>
+            <div class="vesti">
+                <div id="vesti">
+                    <a href="index.html">Микроконтролери - резултати испита одржаног 5.2.2018. године</a>
+                    <a href="index.html">ХЕМИЈA - резултати испита - јануар 2018</a>
+                    <a href="index.html">Аутоматско управљање и Аутоматизација - резултати испита - Јануар 2018.</a>
+                    <a href="index.html">Електротехника и електроника - резултати другог колоквијума од 22.01.2018.</a>
+                    <a href="index.html">Колоквијум из математике - јануар 2018</a>
+                    <a href="index.html">Хемија - резултати колоквијума - јан. 2018</a>
+                    <a href="index.html">Сушење, дорада и складиштење пољопривредних производа - резултати колоквијума - 25. јануар 2018</a>
+                    <a href="index.html">Распоред испита Заштита биља - Пољопривреда - јан-феб - 2018</a>
+                    <a href="index.html">Машинство - распоред испита - јан-феб. - 2018.</a>
+                    <a href="index.html">Електротехника и рачунарство - распоред испита у јануарско/фебруарском року 2018. </a>
+                    <a href="index.html">ЗЖС - Распоред испита - јан-феб - 2018 </a>
+                    <a href="index.html">Распоред испита ПTиН - јан-феб - 2018 </a>
+                    <a href="index.html">Распоред колоквијума - ЗБ - Пољоп. - Јан-Феб 2018 </a>
+                    <a href="index.html">Консултације код Проф. др Јасминке Ђорђевић Милорадовић </a>
+                    <a href="index.html">Аутоматско управљање - резултати колоквијума од 16.1.2018. године </a>
+                    <a href="index.html">ПТиН - Испитна питања - Биологија 1 - јануар 2018 </a>
+                    <a href="index.html">ЗЖС - Испитна питања - Биологија 1 - јануар 2018 </a>
+                    <a href="index.html">Испити код др Горана Ђорђевића - јан-феб. 2018. </a>
+                    <a href="index.html">Испитна питања из предмета Загађењe и заштитa земљишта - јануар 2018. </a>
+                    <a href="index.html">Испитна питања из предмета Физика и хемија земљишта - јануар 2018. </a>
+                </div>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+
+    </div>
+    <div class="podnozje">
+        <p id="Tekst">Tekst iz prvog zadatka...</p>
+        <a href="#vrh"><img src="slike/top.png" /></a>
+        <a href="http://www.facebook.com" target="_blank"><img src="slike/facebook.png" /></a>
+        <a href="http://www.twitter.com" target="_blank"><img src="slike/twitter.png" /></a>
+        <a href="http://www.instagram.com" target="_blank"><img src="slike/instagram.png" /></a>
+    </div>
+    <div id="skriveniElement" onClick="Zatvori()">
+        <img id="skrivenaSlika" src="" />
+    </div>
+</body>
+
+</html>
